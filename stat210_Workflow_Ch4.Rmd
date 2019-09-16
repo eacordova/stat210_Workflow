@@ -1,0 +1,85 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+##Chpaters 4 and exercises
+
+```{r}
+1 / 200 * 30
+(59+73+2)/3
+sin(pi/2)
+
+```
+
+Create new objects by using _<-_
+```{r}
+x <- 3*4
+```
+
+All R statements, when you create objects, have the same format: 
+
+Reminder: Use spaces between assingments and use of _<-_
+
+object names need to strat with a letter and can only have letters, numbers, periods, and underscores. Make it descriptive as possible by adding periods or snake case. 
+```{r}
+x 
+```
+```{r}
+this_is_a_really_long_name <- 3.5
+this_is_a_really_long_name
+```
+```{r}
+r_rocks <- 2 ^ 3
+r_rocks
+```
+R will not recognize the object if you misspell, use typos, or the wrong case. 
+```{r}
+seq(1,10)
+x <- "hello world"
+```
+
+
+The plus sign _+_ tell you that R is waiting for more input. In most cases it means that you forgot and paired quotation mark or a parentheses. 
+```{r}
+y <- seq(1,10, length.out = 5)
+y
+```
+
+This action can be shortened by surrounding the assignment with parentheses. 
+```{r}
+(y <- seq(1, 10, length.out = 5))
+```
+
+In the upper right pane, the environment tab, you can see all the objects you create as you go and hit run. 
+
+##Practice
+1. 
+```{r}
+my_variable <- 10 
+
+```
+It does not work because the "i" is  typed wrong. 
+
+2. 
+
+```{r}
+library(tidyverse)
+
+ggplot(data = mpg) + geom_point(mapping = aes(x = displ, y = hwy))
+
+filter(mpg, cyl == 8)
+filter(diamonds, carat > 3) 
+```
+
+
+
+3. 
+You can get to the shortcuts by clicking on the tools tab and there is a Keyboard Shortcuts Help. 
+
+##Chapter 6 Practice 
+1. 
+Using cmd + alt + shift + M is a shortcut to rename variable names within RScript. 
+
+2. 
+Other common mistakes RStudio will report is checking arguments, it can detect missing arguments, unmatched arguments, partially matched arguments, and too many arguments. It can also warn you if a symbol is used with no difinition and the disgnostics engine supplies a suggestion. It will also warn you if a variable is defined but used and this can help clean the old code or help in diagnosing other errors (where you believe a particular variable should be used, but isn't).  
